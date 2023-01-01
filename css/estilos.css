@@ -1,0 +1,247 @@
+/* ================ GOOGLE FONT ================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* ================ VARIABLES GLOBALES ================ */
+:root {
+  --color-azul: #0a3871;
+  --color-gris: #f9f9f9;
+  --color-violeta: #d16ba5;
+  --color-celeste: #86a8e7;
+  --color-aqua: #5ffbf1;
+
+  --titulo: 24px;
+  --texto: 16px;
+  --texto-pequeño: 12px;
+  --texto-grande: 25px;
+
+  --font-family: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--texto);
+  font-family: var(--font-family);
+}
+
+/* ================ HEADER ================ */
+.header {
+  background: #f9f9f9;
+  padding: 1.3rem;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, #d16ba5, #86a8e7, #5ffbf1);
+  border-image-slice: 1;
+}
+
+.div-logo {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 3rem;
+  align-items: center;
+}
+.div-logo h1 {
+  color: var(--color-azul);
+}
+
+/* =============== MAIN=============== */
+.main {
+  width: 92%;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* =============== CONTENEDOR ENCRIPTADOR =============== */
+
+#texto {
+  padding: 1rem;
+  height: 25rem;
+  font-size: var(--texto-grande);
+  color: var(--color-azul);
+  font-family: var(--font-family);
+  resize: none;
+  outline: none;
+  border: 0;
+}
+#texto::placeholder {
+  color: var(--color-azul);
+  opacity: 0.5;
+}
+.advertencia {
+  color: #495057;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  gap: 0.2rem;
+}
+.botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.btn {
+  width: 340px;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: var(--texto);
+  font-size: var(--texto);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-encriptar {
+  background: var(--color-violeta);
+}
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  opacity: 0.9;
+}
+.btn-encriptar:active,
+.btn-desencriptar:active,
+.btn-copiar:active {
+  transform: scale(0.95);
+}
+.btn-desencriptar {
+  background: var(--color-aqua);
+}
+
+/* =============== CONTENEDOR DESENCRIPTADOR =============== */
+
+/* ESTILO SCRIPT */
+.esconder-vacio {
+  display: none !important;
+}
+
+.col-Desencriptación {
+  width: 400px;
+  padding-inline: 20px;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  position: relative;
+}
+.contenido-vacio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.img-muñeco {
+  margin-bottom: 1.2rem;
+}
+.titulo {
+  font-size: var(--titulo);
+  color: #343a40;
+  margin-bottom: 1.2rem;
+}
+.parrafo {
+  font-size: var(--texto);
+  color: #495057;
+}
+
+/* ====== DESENCRIPTADOR LLENO ======= */
+#textoEncriptado {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 0;
+  overflow: hidden;
+  height: auto;
+  font-size: var(--texto-grande);
+  color: #495057;
+  font-family: var(--font-family);
+  padding: 1rem;
+}
+.btn-copiar {
+  position: absolute;
+  margin: auto;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  background: var(--color-azul);
+}
+
+/* ======FOOTER======= */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #5ffbf1, #86a8e7, #d16ba5);
+  padding: 2rem;
+}
+.parrafo-footer {
+  color: #fff;
+}
+.redes a {
+  color: #fff;
+}
+.fa-brands {
+  margin: 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+/* ======ESTILOS RESPONSIVE======= */
+/* MEDIA QUERY TABLET */
+@media (max-width: 768px) {
+  .main {
+    height: 100%;
+  }
+  .flex {
+    flex-direction: column;
+    justify-content: unset;
+    gap: 1.4rem;
+  }
+  .img-muñeco {
+    display: none;
+  }
+  .col-Desencriptación {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  .contenido-vacio {
+    padding: 1.2rem 0;
+  }
+  #textoEncriptado {
+    overflow: hidden;
+    display: block;
+    height: auto;
+  }
+
+  #content-Template input {
+    position: relative;
+    width: 96%;
+    margin-bottom: 1.2rem;
+    bottom: 0;
+  }
+  .btn {
+    width: 400px;
+  }
+}
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 375px) {
+  .div-logo h1 {
+    font-size: 1.5rem;
+  }
+  #texto {
+    height: 20rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
