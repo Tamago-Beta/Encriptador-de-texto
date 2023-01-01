@@ -34,7 +34,7 @@ function encriptar() {
             
         }
     } else{
-        alert("El campo está vacio");
+        animaciónMensaje('.contenido-vacio', 'tada');
     }
 }
 
@@ -55,7 +55,7 @@ function desencriptar() {
             heightAutomatico();
         }
     } else{
-        alert("El campo está vacio");
+        animaciónMensaje('.contenido-vacio', 'tada');
     }
 }
 
